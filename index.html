@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Noah Johannessen – Web Page Bio (Accessible Computing)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <h1>Noah Johannessen</h1>
+      <p class="tagline">Computer Science student focused on building software that works for everyone.</p>
+
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#accessibility">Accessibility</a></li>
+          <li><a href="#collab">Team Project Fit</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="bio-links.html">Class Bio Links</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section id="about" aria-labelledby="about-heading" class="card">
+      <h2 id="about-heading">About Me</h2>
+
+      <div class="media">
+        <figure class="media-figure">
+          <!-- Non-decorative image: meaningful content -->
+          <img class="headshot" src="images/headshot.jpg" alt="Photo of Noah Johannessen">
+          <figcaption class="muted">That’s me — say hi if you see me in class.</figcaption>
+        </figure>
+
+        <div class="media-body">
+          <p>
+            I’m a CS student who likes building products that feel <strong>fast, clear, and respectful</strong>
+            of the user. I care a lot about accessibility because it’s where “good engineering” and “good ethics”
+            overlap. If someone can’t use what we build, it doesn’t matter how clever it is.
+          </p>
+
+          <p>
+            Outside of class, I’m into music and software. I enjoy making tools that reduce friction so people can
+            focus on what they’re actually trying to do. I also like learning by shipping small things quickly and
+            improving them.
+          </p>
+        </div>
+      </div>
+
+      <!-- Decorative image: explicitly ignored by assistive tech -->
+      <img class="divider" src="images/divider.svg" alt="" aria-hidden="true">
+    </section>
+
+    <section id="accessibility" aria-labelledby="accessibility-heading" class="card">
+      <h2 id="accessibility-heading">My Accessibility Interests</h2>
+
+      <h3>What I’m most interested in</h3>
+      <ul>
+        <li>Semantic HTML and keyboard-friendly UI patterns</li>
+        <li>Readable layouts and strong information hierarchy</li>
+        <li>Forms that are easy to complete and hard to mess up</li>
+      </ul>
+
+      <h3>How I try to apply it</h3>
+      <p>
+        I’m trying to get better at building interfaces that don’t rely on “guessing.” That means clear labels,
+        consistent navigation, and feedback that helps users recover from mistakes. I also try to avoid building
+        features that only work for mouse users.
+      </p>
+
+      <p>
+        One thing I’ve learned: accessible design often makes the experience better for <em>everyone</em>, not just
+        people using assistive technology.
+      </p>
+
+      <!-- Optional non-formatting table (kept semantic and minimal) -->
+      <h3>Quick accessibility checklist I like</h3>
+      <div class="table-wrap" role="region" aria-label="Accessibility checklist table" tabindex="0">
+        <table>
+          <caption class="muted">A simple checklist I use when reviewing a page.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Area</th>
+              <th scope="col">What I check</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Keyboard</th>
+              <td>Can I reach everything without a mouse?</td>
+            </tr>
+            <tr>
+              <th scope="row">Headings</th>
+              <td>Do headings form a clear outline (H1 → H2 → H3)?</td>
+            </tr>
+            <tr>
+              <th scope="row">Images</th>
+              <td>Do meaningful images have helpful alt text?</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="collab" aria-labelledby="collab-heading" class="card">
+      <h2 id="collab-heading">How I Could Fit on a Team Project</h2>
+
+      <h3>What I can contribute</h3>
+      <ol>
+        <li>Building clean, semantic HTML structures</li>
+        <li>Creating accessible forms and navigation</li>
+      </ol>
+
+      <h3>What I’d love to collaborate on</h3>
+      <p>
+        If you’re interested in accessibility topics like evaluation, user testing, or inclusive UX patterns,
+        I’d love to team up. I’m especially interested in projects where we can measure improvement and show
+        real evidence of better usability.
+      </p>
+
+      <p class="callout">
+        If you want to connect, the class list is here:
+        <a href="bio-links.html">Web Page Bio Links</a>.
+      </p>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading" class="card">
+      <h2 id="contact-heading">Contact / Collaboration Form</h2>
+      <p class="muted">
+        This form initiates an email draft. If your browser doesn’t support it, you can email me directly.
+      </p>
+
+      <!-- Forms must initiate an action; mailto is acceptable per assignment -->
+      <form
+        action="mailto:njohannessen@tamu.edu"
+        method="post"
+        enctype="text/plain"
+        class="form"
+      >
+        <fieldset>
+          <legend>Send me a message</legend>
+
+          <div class="field">
+            <label for="sender-name">Your name</label>
+            <input id="sender-name" name="name" type="text" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="sender-email">Your email</label>
+            <input id="sender-email" name="email" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="field">
+            <label for="topic">Accessibility interest</label>
+            <select id="topic" name="topic" required>
+              <option value="">Choose one</option>
+              <option value="semantic-html">Semantic HTML</option>
+              <option value="forms">Accessible Forms</option>
+              <option value="keyboard">Keyboard Navigation</option>
+              <option value="testing">User Testing</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit">Create Email Draft</button>
+        </fieldset>
+      </form>
+
+      <p class="muted">
+        Direct link to the class bio links page:
+        <a href="https://docs.google.com/document/d/10nTEkUx4IVWT_oC9CfM5BCgIWGQVcWJRhelf6fSZpuw/edit?tab=t.0">bio-links.html</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        Built with semantic HTML + external CSS.
+        <span class="muted">Last updated: February 8, 2026</span>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

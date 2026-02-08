@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="60" viewBox="0 0 1200 60" role="img" aria-label="Decorative divider">
+  <path d="M0 30 C 150 10, 300 50, 450 30 S 750 50, 900 30 S 1050 10, 1200 30"
+        fill="none" stroke="#072747" stroke-width="6" stroke-linecap="round"/>
+</svg>
